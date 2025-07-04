@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(210, 11%, 15%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 13%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 11%, 15%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 11%, 15%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(146, 49%, 36%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(146, 50%, 96%);
+  --secondary-foreground: hsl(210, 11%, 15%);
+  --accent: hsl(146, 50%, 96%);
+  --accent-foreground: hsl(210, 11%, 15%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(146, 49%, 36%);
+  --radius: 0.5rem;
+  
+  /* Custom medical colors */
+  --medical-green: hsl(146, 49%, 36%);
+  --light-mint: hsl(146, 50%, 96%);
+  --dark-green: hsl(146, 58%, 23%);
+  --professional-dark: hsl(210, 22%, 22%);
+  --trust-blue: hsl(207, 74%, 59%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 4%, 16%);
+  --muted-foreground: hsl(240, 5%, 65%);
+  --popover: hsl(240, 10%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 4%, 16%);
+  --input: hsl(240, 4%, 16%);
+  --primary: hsl(146, 49%, 36%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 4%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 4%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 5%, 84%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-medical-green {
+    color: var(--medical-green);
+  }
+  
+  .bg-medical-green {
+    background-color: var(--medical-green);
+  }
+  
+  .text-light-mint {
+    color: var(--light-mint);
+  }
+  
+  .bg-light-mint {
+    background-color: var(--light-mint);
+  }
+  
+  .text-dark-green {
+    color: var(--dark-green);
+  }
+  
+  .bg-dark-green {
+    background-color: var(--dark-green);
+  }
+  
+  .text-professional-dark {
+    color: var(--professional-dark);
+  }
+  
+  .bg-professional-dark {
+    background-color: var(--professional-dark);
+  }
+  
+  .text-trust-blue {
+    color: var(--trust-blue);
+  }
+  
+  .bg-trust-blue {
+    background-color: var(--trust-blue);
+  }
+}
